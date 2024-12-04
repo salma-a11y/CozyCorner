@@ -1,0 +1,262 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+      
+<div  id="mysidebar" class="sidenav" style="color: red;">
+
+<div class="sidebar-wrapper ps-container ps-theme-default" data-ps-id="3a8db1f4-24d8-4dbf-85c9-4f5215c1b29a" >
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <p style="color: red;">BRAND</p>
+                  </a>
+                  </li>
+            </ul>
+           
+      </div>
+      <div class="sidebar-wrapper ps-container ps-theme-default" data-ps-id="3a8db1f4-24d8-4dbf-85c9-4f5215c1b29a">
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="">
+              <p style="color: rgb(25, 0, 255);"> Home</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="">
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="">
+              <p >Category List</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <p>Product List</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="">
+              <p>Add Products</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <p>FeedBack</p>
+            </a>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+  </div>
+    </body>
+    <script>
+        let sidenav= document.querySelector(".sidenav");
+        let searchBtn = document.querySelector(".bx-search");
+        closeBtn.addEventListener("click", ()=>{
+          sidebar.classList.toggle("open");
+          menuBtnChange();//calling the function(optional)
+        });
+        searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+          sidebar.classList.toggle("open");
+          sidebar.classList.toggle("open");
+          sidebar.classList.toggle("open");
+        });
+  // following are the code to change sidebar button(optional)
+   function menuBtnChange() {
+    if(sidebar.classList.contains("open")){
+      closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+    }else {
+      closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+    }
+  }
+
+    </script>
+
+      <div class="users">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  color: rgb(32, 3, 31);
+}
+
+td, th {
+  border: 0px solid #3b3a3a;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+
+<h3>USERS</h3>
+
+<table style="color:rgb(19, 11, 11);">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>Country</th>
+    <th>Type of user</th>
+  </tr>
+  <tr>
+    <td>ahmed</td>
+    <td>ahmed@gmail.com</td>
+    <td>0108278736</td>
+    <td>cairo</td>
+    <td>customer</td>
+  </tr>
+  <tr>
+    <td>ali</td>
+    <td>ali@yahoo.com</td>
+    <td>011826437854</td>
+    <td>alexandria</td>
+    <td>premium customer</td>
+
+  </tr>
+  <tr>
+    <td>john </td>
+    <td>joha@gmail.com </td>
+    <td>922837586</td>
+    <td>paris</td>
+    <td>premium customer</td>
+  </tr>
+  <tr>
+    <td> safy</td>
+    <td> safy@gmail.com</td>
+    <td>7878476847</td>
+    <td>thailand</td>
+     <td>customer</td>
+  </tr>
+  <tr>
+    <td>shery </td>
+    <td> shery@gmail.com</td>
+    <td>0112862468</td>
+    <td>cairo</td>
+    <td>admin</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td></td>
+  </tr>
+</table>
+<button style="background-color: rgb(55, 0, 255) ; position: bottom;">ADD USER</button>
+
+      </div>
+      <div class="products">
+        <h3>PRODUCTS</h3>
+<script src="./admin.js"></script>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+<script>
+const xValues = ["clothes", "make up", "cars", "accessories", "food"];
+const yValues = [55, 49, 44, 24, 15];
+const barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "ratio of sales on products"
+    }
+  }
+});
+</script>
+      </div>
+      <div class="orders">
+        <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+        
+        <h3>ORDERS</h3>
+        
+        <table>
+          <tr>
+            <th>id-order</th>
+            <th>id-customer</th>
+            <th>pay</th>
+            <th>date and time</th>
+            
+          </tr>
+          <tr>
+            <td> 56367 </td>
+            <td>1 </td>
+            <td>1500$</td>
+            <td>2/6/2023-3:24am</td>
+          </tr>
+          <tr>
+            <td>  65756</td>
+            <td> 23</td>
+            <td>3050$</td>
+            <td>7/9/2023-5:13pm</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table> 
+        <br> </br>
+        
+        <button style="background-color: rgb(255, 72, 0) ; position: bottom;">Edit Order</button>
+      </div>
+</body>
+</html>

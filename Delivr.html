@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width =device-width ,initial-scale=1.0">
+    <title >Deliver</title>
+    <link rel="icon" href="img/icons8-delivery-48.png" class="icon">
+    <link rel="stylesheet" href="css/styles_salma.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>    
+<body>
+    <div class="wrapper">
+        <div class="payment">
+            
+
+            <h2>Billing Address</h2>
+            <div class="form">
+                <div class="card space icon-relative ">
+                    <lable  class="lable">Full name </lable>
+                    <input type="text" class="input" placeholder="">
+                    
+                </div>
+                <div class="card space icon-relative ">
+                    <lable  class="lable">Email </lable>
+                    <input type="text" class="input" placeholder="Example@Example.com">
+                    
+                </div>
+                <div class="card-item icon-relative">
+                    <lable  class="lable">City </lable>
+                    <input type="text" class="input"  placeholder="cairo">
+                   
+                </div>
+                <div class="card space icon-relative ">
+                    <lable  class="lable">Address in detail </lable>
+                    <input type="text" class="input" placeholder="">
+                    
+                </div>
+                <div class="card space icon-relative">
+                    <lable  class="lable">Phone number </lable>
+                    <input type="text" class="input" data-mask="0000 000 0000"  placeholder="+02 ">
+                    
+                </div>
+                <div class="card-grp space">
+                    <div class="card-item icon-relative">
+                        <lable  class="lable">Apartment No. </lable>
+                        <input type="text" class="input " data-mask="00 " placeholder="00  ">
+                       
+                    </div>
+                    <div class="card-item icon-relative">
+                        <lable  class="lable">floor No. </lable>
+                        <input type="text" class="input" data-mask="00" placeholder="00">
+                       
+                    </div>
+                    
+                </div>
+                <button  type="submit" class="btn" onclick="openPopup()">
+                    Submit
+                </button>
+                       <div class="popup" id="popup">
+                    <img src="img/icons8-delivery.gif ">
+                    <h1>Your order on way!</h1>
+                    <p><br><br><br>Yourdetails has been successfully submited,
+                        Thank you for your choise of our website .
+                    </p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                       </div>
+                </div> 
+             </div>
+    </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+<script>
+    let popup =document.getElementById("popup");
+
+    function openPopup() {
+        popup.classList.add("open-popup");
+    }
+
+    function closePopup() {
+        popup.classList.remove("open-popup");
+    }
+
+
+    function openPopup() {
+    // Get the values of the input fields
+    const fullName = document.querySelector('.card:nth-child(1) .input').value;
+    const email = document.querySelector('.card:nth-child(2) .input').value;
+    const city = document.querySelector('.card-item:nth-child(3) .input').value;
+    const addressDetail = document.querySelector('.card:nth-child(4) .input').value;
+    const phoneNumber = document.querySelector('.card:nth-child(5) .input').value;
+    const apartmentNo = document.querySelector('.card-grp .card-item:nth-child(1) .input').value;
+    const floorNo = document.querySelector('.card-grp .card-item:nth-child(2) .input').value;
+
+    // Check if any of the required fields is empty
+    if (!fullName || !email || !city || !addressDetail || !phoneNumber || !apartmentNo || !floorNo) {
+        // Display an alert if any of the required fields is empty
+        alert('Please fill in all the required address details before submitting.');
+    } else {
+        // Open the popup if all required fields are filled
+        popup.classList.add("open-popup");
+    }
+}
+
+</script>
+
+</body>  
+</html>  
